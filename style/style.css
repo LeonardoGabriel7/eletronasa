@@ -141,6 +141,86 @@ header nav ul li a:hover {
   background-color: #e6b800;
 }
 
+
+.differentials {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: #000;
+}
+
+.differentials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff200;
+}
+
+.differentials-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.differentials-image {
+  flex: 1;
+  text-align: center;
+}
+
+.differentials-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.differentials-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.differential {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.differential i {
+  font-size: 40px;
+  color: #fff200;
+  margin-right: 15px;
+}
+
+.differential h3 {
+  font-size: 24px;
+  color: #fff200;
+  margin-bottom: 5px;
+}
+
+.differential p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .differentials-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .differential {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .differential i {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+
 /* Seção Sobre Nós */
 .about {
   padding: 60px 10%;
