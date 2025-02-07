@@ -266,7 +266,7 @@ header nav ul li a:hover {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .location .btn {
@@ -276,11 +276,14 @@ header nav ul li a:hover {
   text-decoration: none;
   border-radius: 5px;
   font-size: 18px;
+ 
 }
 
 .location .btn:hover {
   background-color: #e6b800;
 }
+
+
 
 /* Rodapé */
 footer {
