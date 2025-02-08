@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eletronaas - Serviços Automotivos</title>
+  <title>Eletronasa - Serviços Automotivos</title>
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script src="script.js"></script>
@@ -12,7 +12,7 @@
   <!-- Cabeçalho -->
   <header>
     <div class="logo">
-      <h1>Eletronasa</h1>
+      <img class="logo" src="imagens/logo.png" alt="">
     </div>
     <nav>
       <ul>
@@ -25,14 +25,15 @@
     </nav>
   </header>
 
-  <!-- Seção de Destaque -->
-  <section id="home" class="hero">
+  <section id="destaque" class="hero">
+    <img src="imagens/7.jpeg" alt="Imagem de destaque">
     <div class="hero-content">
       <h2>Serviços Automotivos de Alta Qualidade <br> Em Contagem</h2>
       <p>Oferecemos soluções completas para o seu veículo.</p>
-      <a href="#services" class="btn" id="diferenciais">Conheça Nossos Serviços</a>
+      <a href="#services" class="btn1" id="diferenciais">Conheça Nossos Serviços</a>
     </div>
   </section>
+
 
 <!-- Seção de Diferenciais -->
 <section id="differentials" class="differentials">
@@ -60,6 +61,10 @@
     </div>
   </div>
 </section>
+
+
+
+
 
   <!-- Seção de Serviços -->
   <section id="services" class="services">
@@ -106,33 +111,50 @@
 
 
 
-  <!-- Seção Sobre Nós -->
-  <section  class="about">
-    <h2>Sobre Nós</h2>
-    <div class="about-content">
+<!-- Seção Sobre Nós -->
+<section class="about">
+  <div class="about-container">
+    <div class="about-text">
+      <h2>Sobre Nós</h2>
       <p>
-        A <strong>Eletronaas</strong> é uma empresa especializada em serviços automotivos, com mais de 10 anos de experiência no mercado. Nosso compromisso é oferecer serviços de alta qualidade, segurança e eficiência para nossos clientes.
+        Na Eletronasa, somos especializados em oferecer serviços automotivos de alta qualidade para garantir que seu veículo esteja sempre em excelente estado de funcionamento. Com uma equipe de profissionais experientes e apaixonados pelo que fazem, atendemos desde manutenções simples até reparos mais complexos, com um cuidado especial para cada tipo de serviço.
       </p>
       <p>
-        Trabalhamos com equipe qualificada e equipamentos modernos para atender todas as necessidades do seu veículo.
+        Nossa missão é proporcionar segurança, conforto e confiança aos nossos clientes, oferecendo soluções rápidas e eficientes para que você possa aproveitar ao máximo seu carro, seja no dia a dia ou em viagens. Trabalhamos com as mais modernas tecnologias e ferramentas para garantir que seu veículo receba o melhor atendimento possível.
+      </p>
+      <p>
+        Seja para manutenção preventiva, serviços de mecânica, elétrica ou ar-condicionado, estamos prontos para cuidar do seu carro com responsabilidade e profissionalismo. Agende sua revisão e venha conhecer a qualidade Eletronasa!
       </p>
     </div>
+    <div class="about-image">
+      <img src="imagens/8.jpeg" alt="Imagem sobre a Eletronasa">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- ORÇAMENTO -->
+  <section id="budget" class="budget">
+    <div class="divider-top"></div> <!-- Divisor superior -->
+    <div class="budget-content">
+      <h2>Faça um Orçamento Rápido</h2>
+      <p>Preencha suas informações e obtenha uma estimativa de preço personalizada para seu veículo.</p>
+      <a href="https://api.whatsapp.com/send?phone=5511999999999" class="btn-budget">Solicitar Orçamento</a>
+    </div>
+    <div class="divider-bottom"></div> <!-- Divisor inferior -->
   </section>
+  
 
   <!-- Seção de Localização -->
   <section id="location" class="location">
     <h2>Onde Estamos</h2>
     <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.65342658440729!3d-23.565734367638952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1633023226789!5m2!1spt-BR!2sbr"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.2337810985505!2d-44.060190399999996!3d-19.9566683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6bfd2897a602f%3A0x4bc02ff8c8cbaf2!2sR.%20Rio%20Paranagu%C3%A1%2C%201420%20-%20Novo%20Riacho%2C%20Contagem%20-%20MG%2C%2032280-320!5e0!3m2!1spt-BR!2sbr!4v1738980949882!5m2!1spt-BR!2sbr" width="1200" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-    <a href="https://goo.gl/maps/xyz123" target="_blank" class="btn">Como Chegar</a>
+    <a href="https://maps.app.goo.gl/wDgUWcZaCj92xmxj9" target="_blank" class="btn">Como Chegar</a>
   </section>
 
 
@@ -147,19 +169,17 @@
       </div>
       <div class="footer-section">
         <h3>Contato</h3>
-        <p><i class="fas fa-phone"></i> (11) 1234-5678</p>
-        <p><i class="fas fa-envelope"></i> contato@eletronasa.com.br</p>
-        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+        <p><i class="fas fa-phone"></i> (31) 9620-1126</p>
+        <p><i class="fas fa-map-marker-alt"></i> Contagem - MG</p>
       </div>
       <div class="footer-section">
         <h3>Redes Sociais</h3>
-        <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-      </div>
+    </div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Eletronasa. Todos os direitos reservados.</p>
+      <p>Site desenvolvido por <a href="https://acm-digital.netlify.app/?fbclid=PAZXh0bgNhZW0CMTEAAabpgoBo2ZL5QcTB80umBBTTBP_t-1ZQvKUnZdbDKIQvqral8qBKoTd2WsI_aem_KnhGEFKDvnigfvx7NIIMYQ"><strong>Acm Digital</strong></a></p>
     </div>
   </footer>
 

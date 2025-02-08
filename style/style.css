@@ -18,12 +18,13 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 10%;
-  background-color: #111;
+  background-color: #000;
 }
 
-header .logo h1 {
-  font-size: 28px;
-  color: #fff200;
+header .logo {
+  width: 200px;
+  height: 100px;
+  
 }
 
 header nav ul {
@@ -45,17 +46,37 @@ header nav ul li a:hover {
   color: #fff200;
 }
 
-/* Seção de Destaque */
+
+
+
+/* PAGINA PRINCIPAL */
 .hero {
-  background-image: url('car-service.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;  /* Largura 100% da tela */
+  height: 500px;  /* A altura será ajustada para 500px */
+  overflow: hidden;  /* Impede que a imagem ultrapasse os limites da seção */
+}
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* A imagem vai cobrir a área sem distorcer */
+  object-position: center 9%;  /* Ajuste para a imagem estar ligeiramente abaixo do topo */
+  z-index: -1;  /* A imagem ficará atrás do conteúdo */
+  opacity: 0.3;  /* Adiciona opacidade para escurecer a imagem */
+}
+
+.hero-content {
+  position: absolute;  /* A posição é absoluta para centralizar o conteúdo dentro da seção */
+  top: 50%;  /* Coloca o conteúdo no meio verticalmente */
+  left: 50%;  /* Coloca o conteúdo no meio horizontalmente */
+  transform: translate(-50%, -50%);  /* Ajusta a posição para garantir que o conteúdo fique centrado */
   text-align: center;
   color: #fff;
+  width: 100%;  /* Garante que o conteúdo ocupe toda a largura disponível */
 }
 
 .hero-content h2 {
@@ -81,6 +102,10 @@ header nav ul li a:hover {
   background-color: #e6b800;
 }
 
+
+.btn1:hover{
+background-color: #e6b800; 
+}
 
 
 /* Seção diferenciais */
@@ -113,6 +138,7 @@ header nav ul li a:hover {
   height: 400px;
   max-width: 800px;
   border-radius: 10px;
+  border: 2px solid #fff200;
 }
 
 .differentials-text {
@@ -137,12 +163,22 @@ header nav ul li a:hover {
   font-size: 24px;
   color: #fff200;
   margin-bottom: 5px;
+  margin-left: 0;  /* Remover qualquer margem à esquerda */
+  padding-left: 5px; /* Alinha os títulos com os parágrafos */
 }
+
+
 
 .differential p {
   font-size: 16px;
-  color: #ccc;
+  color: #FFF;
+  margin-left: 0; /* Garantir que todos os parágrafos fiquem alinhados */
+  margin-top: 0;
+  margin-bottom: 10px;
+  font: bolder;
 }
+
+
 
 @media (max-width: 768px) {
   .differentials-content {
@@ -231,23 +267,117 @@ header nav ul li a:hover {
 /* Seção Sobre Nós */
 .about {
   padding: 60px 10%;
-  text-align: center;
   background-color: #000;
 }
 
-.about h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #fff200;
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.about-content p {
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  border: 2px solid #fff200;
+}
+
+.about-text {
+  flex: 1;
+  padding: 20px;
+  color: #ccc;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  color: #fff200;
+  margin-bottom: 20px;
+}
+
+.about-text p {
   font-size: 18px;
   line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto 20px;
-  color: #ccc;
 }
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .about-text {
+    padding: 20px 0;
+  }
+}
+
+
+
+
+/* Seção Orçamento Rápido */
+.budget {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0 80px 0; /* Aumentando o padding inferior para mais espaço */
+  height: auto; /* Remover a altura fixa, permitindo que a seção se ajuste */
+  position: relative;
+}
+
+.divider-top, .divider-bottom {
+  height: 5px;
+  background-color: #fff200;
+  width: 90%; /* Ajustando a largura das linhas para 50% da tela */
+  margin: 0 auto; /* Centraliza as linhas */
+}
+
+.divider-bottom {
+  margin-top: 40px; /* Espaçamento maior entre o botão e a linha divisória inferior */
+}
+
+.budget-content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #fff200; /* Cor de destaque */
+  margin-TOP: 20px; /* Espaçamento maior entre o botão e a linha */
+}
+
+.budget-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* Botão */
+.btn-budget {
+  padding: 15px 30px;
+  background-color: #fff200;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px; /* Espaçamento maior entre o botão e a linha */
+}
+
+.btn-budget:hover {
+  background-color: #e6b800; /* Cor quando passar o mouse */
+}
+
+
+
 
 /* Seção de Localização */
 .location {
@@ -285,6 +415,8 @@ header nav ul li a:hover {
 
 
 
+
+
 /* Rodapé */
 footer {
   background-color: #111;
@@ -309,8 +441,13 @@ footer {
   color: #fff200;
 }
 
+.footer-section a {
+  font-size: 32px; /* Aumenta o tamanho do ícone */
+  color: #fff; /* Cor branca */
+}
+
 .footer-section a:hover {
-  color: #fff200;
+  color: #fff200; /* Amarelo no hover */
 }
 
 .footer-bottom {
@@ -329,4 +466,47 @@ footer {
   .footer-section {
     width: 100%;
   }
+}
+
+
+/* Animação de pulsação para os botões */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Estilo base dos botões */
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #fff200;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  
+}
+
+.btn1 {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #fff200;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: pulse 2s infinite;
+}
+
+/* Efeito ao passar o mouse (hover) */
+
+
+
+html {
+  scroll-behavior: smooth;
 }
