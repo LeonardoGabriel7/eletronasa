@@ -50,6 +50,11 @@ header nav ul li a:hover {
 
 
 /* PAGINA PRINCIPAL */
+
+.contagem{
+  color: #fff200;
+  font-weight: bolder;
+}
 .hero {
   position: relative;
   width: 100%;  /* Largura 100% da tela */
@@ -109,92 +114,159 @@ background-color: #e6b800;
 
 
 /* Seção diferenciais */
+/* Seção diferenciais */
 .differentials {
-  padding: 60px 10%;
+  padding: 60px 8%;
   text-align: center;
   background-color: #000;
 }
 
 .differentials h2 {
-  font-size: 36px;
+  font-size: 34px;
   margin-bottom: 40px;
   color: #fff200;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
 .differentials-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .differentials-image {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
 }
 
 .differentials-image img {
-  width: 600px;
-  height: 400px;
-  max-width: 800px;
+  width: 500px;
+  height: 500px;
   border-radius: 10px;
-  border: 2px solid #fff200;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 15px 15px 0 0 #fff200; /* Sombra destacada */
+  transition: transform 0.3s ease-in-out;
+}
+
+.differentials-image img:hover {
+  transform: scale(1.05);
 }
 
 .differentials-text {
   flex: 1;
+  max-width: 500px;
   padding: 20px;
+  background: rgba(90, 73, 73, 0.055);
+  padding-left: 20px;
+  border-radius: 5px;
+  text-align: left;
 }
 
 .differential {
   display: flex;
-  align-items: center;
+  align-items: center; /* Centraliza verticalmente o ícone e o h3 */
   text-align: left;
   margin-bottom: 20px;
+  background: rgba(255, 242, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+  gap: 15px;
+}
+
+.differential:hover {
+  background: rgba(255, 242, 0, 0.2);
 }
 
 .differential i {
-  font-size: 40px;
+  font-size: 36px;
   color: #fff200;
-  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.differential-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .differential h3 {
-  font-size: 24px;
+  font-size: 22px;
   color: #fff200;
-  margin-bottom: 5px;
-  margin-left: 0;  /* Remover qualquer margem à esquerda */
-  padding-left: 5px; /* Alinha os títulos com os parágrafos */
+  font-weight: bold;
+  margin: 0;
+  padding-top: 10px; /* Ajuste o valor para centralizar melhor */
 }
-
-
 
 .differential p {
   font-size: 16px;
   color: #FFF;
-  margin-left: 0; /* Garantir que todos os parágrafos fiquem alinhados */
-  margin-top: 0;
-  margin-bottom: 10px;
-  font: bolder;
+  margin-top: 5px;
+  line-height: 1.4;
+  min-height: 45px;
+  display: flex;
+  align-items: center;
 }
 
-
-
-@media (max-width: 768px) {
+/* Responsividade */
+@media (max-width: 1024px) {
   .differentials-content {
     flex-direction: column;
     text-align: center;
   }
-  .differential {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+
+  .differentials-text {
+    max-width: 100%;
+    padding: 0 10px;
+    border-left: none;
+    border-top: 4px solid #fff200;
+    padding-top: 20px;
   }
+
+  .differential {
+    flex-direction: row;
+    text-align: left;
+    padding: 12px;
+    gap: 10px;
+  }
+
   .differential i {
-    margin-bottom: 10px;
+    font-size: 32px;
   }
 }
 
+@media (max-width: 768px) {
+  .differentials-image {
+    max-width: 100%;
+  }
+
+  .differentials-content {
+    padding: 20px;
+  }
+
+  .differential {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .differential i {
+    margin-bottom: 10px;
+  }
+
+  .differential p {
+    text-align: center;
+  }
+}
 
 
 
@@ -286,8 +358,10 @@ background-color: #e6b800;
   width: 500px;
   height: 500px;
   border-radius: 10px;
-  border: 2px solid #fff200;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 15px 15px 0 0 #fff200;
 }
+
 
 .about-text {
   flex: 1;
