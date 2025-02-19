@@ -8,8 +8,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  color: #fff; /* Letras brancas */
-  background-color: #000; /* Fundo preto */
+  color: #fff;
+  background-color: #000;
 }
 
 /* Cabeçalho */
@@ -19,17 +19,18 @@ header {
   align-items: center;
   padding: 20px 10%;
   background-color: #000;
+  position: relative;
 }
 
-header .logo {
+header .logo img {
   width: 150px;
   height: 100px;
-  
 }
 
 header nav ul {
   list-style: none;
   display: flex;
+  margin-left: auto;
 }
 
 header nav ul li {
@@ -45,6 +46,109 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #fff200;
 }
+
+/* Menu Hambúrguer */
+.menu-toggle {
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+  color: #fff;
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-toggle .bar {
+  background-color: #fff;
+  height: 4px;
+  width: 25px;
+  margin: 5px 0;
+}
+
+/* Menu Responsivo */
+@media (max-width: 768px) {
+  /* Menu Hamburguer */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000;
+    margin-top: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+}    
+
+/* Ajustes para o layout do mobile */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 5%;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: static; /* Alterado para posicionamento relativo */
+    transform: none;
+    order: 1; /* Garante que fique à direita */
+  }
+
+  nav {
+    width: 100%;
+    order: 2; /* Coloca o menu abaixo do header */
+    display: none; /* Esconde por padrão */
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: #000;
+    padding: 20px 0;
+    margin-top: 15px;
+    display: none; /* Mantém escondido inicialmente */
+  }
+
+  nav ul.show {
+    display: flex; /* Exibe quando tem a classe */
+    position: static; /* Remove posicionamento absoluto */
+    box-shadow: none;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+
+
+
 
 
 
