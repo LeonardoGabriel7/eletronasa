@@ -185,37 +185,58 @@ header{
 
   
   /* ============= DIFERENCIAIS ============= */
-  .differentials-content {
-    align-items: stretch;
+  @media (max-width: 1024px) {
+    .differentials-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .differentials-image {
+      display: none; /* Oculta a imagem */
+    }
+  
+    .differentials-text {
+      max-width: 100%;
+      padding: 0 10px;
+      border-left: none;
+      padding-top: 20px;
+    }
+  
+    .differential {
+      flex-direction: row;
+      text-align: left;
+      padding: 12px;
+      gap: 10px;
+    }
+  
+    .differential i {
+      font-size: 32px;
+    }
   }
   
-  .differentials-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-  }
+  @media (max-width: 768px) {
+    .differentials-content {
+      padding: 20px;
+    }
   
-  .differentials-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+    .differential {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
   
-  .differentials-text {
-    padding: 0 40px;
-  }
+    .differential i {
+      margin-bottom: 10px;
+    }
   
-  .differential {
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    transition: transform 0.3s ease;
-    border: 2px solid #fff200;
+    .differential p {
+      text-align: center;
+    }
   }
+
+
+
   
-  .differential:hover {
-    transform: translateY(-5px);
-  }
   
   /* ============= SOBRE NÓS ============= */
   .about-container {

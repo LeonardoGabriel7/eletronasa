@@ -138,17 +138,19 @@ background-color: #e6b800;
 }
 
 
-/* Seção diferenciais */
+
 /* Seção diferenciais */
 .differentials {
   padding: 60px 8%;
   text-align: center;
   background-color: #000;
+  margin-bottom: -50PX;
 }
 
 .differentials h2 {
   font-size: 34px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
+  margin-top: -15PX;
   color: #fff200;
   font-weight: bold;
   text-transform: uppercase;
@@ -242,56 +244,6 @@ background-color: #e6b800;
   align-items: center;
 }
 
-/* Responsividade */
-@media (max-width: 1024px) {
-  .differentials-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .differentials-text {
-    max-width: 100%;
-    padding: 0 10px;
-    border-left: none;
-    border-top: 4px solid #fff200;
-    padding-top: 20px;
-  }
-
-  .differential {
-    flex-direction: row;
-    text-align: left;
-    padding: 12px;
-    gap: 10px;
-  }
-
-  .differential i {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 768px) {
-  .differentials-image {
-    max-width: 100%;
-  }
-
-  .differentials-content {
-    padding: 20px;
-  }
-
-  .differential {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px;
-  }
-
-  .differential i {
-    margin-bottom: 10px;
-  }
-
-  .differential p {
-    text-align: center;
-  }
-}
 
 
 
