@@ -186,6 +186,15 @@ header{
   
   /* ============= DIFERENCIAIS ============= */
   @media (max-width: 1024px) {
+    
+    .differentials {
+      padding: 60px 8%;
+      text-align: center;
+      background-color: #000;
+      margin-bottom: -100PX;
+    height: 1050px;
+    }
+    
     .differentials-content {
       flex-direction: column;
       text-align: center;
@@ -207,6 +216,11 @@ header{
       text-align: left;
       padding: 12px;
       gap: 10px;
+    }
+
+    .differentials h2{
+      margin-top: -60px;
+      margin-bottom: 0px;
     }
   
     .differential i {
