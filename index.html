@@ -15,11 +15,11 @@
     <div class="logo">
         <img src="imagens/logo.png" alt="Logo do Centro Automotivo">
     </div>
-    <div class="menu-toggle" id="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
+    <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+  </div>
     <nav>
         <ul>
             <li><a href="#home">Início</a></li>
@@ -30,6 +30,14 @@
         </ul>
     </nav>
 </header>
+
+<script>
+  function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.classList.toggle('show');
+      console.log('Menu clicado!'); // Para debug
+  }
+  </script>
 
 <script>
     // Função para alternar a classe 'show' no menu
