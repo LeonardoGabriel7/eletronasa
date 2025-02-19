@@ -358,22 +358,7 @@ background-color: #e6b800;
   line-height: 1.8;
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .about-image img {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .about-text {
-    padding: 20px 0;
-  }
-}
 
 
 
